@@ -1,0 +1,9 @@
+project: savantenvs/contiki-ng
+target: fuzz_lwm2m_tlv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lwm2m_tlv/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lwm2m_tlv
+    libfuzzer: true
+    timeout: 10

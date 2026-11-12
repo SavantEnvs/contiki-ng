@@ -1,0 +1,9 @@
+project: savantenvs/contiki-ng
+target: fuzz_jsonparse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_jsonparse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_jsonparse
+    libfuzzer: true
+    timeout: 10

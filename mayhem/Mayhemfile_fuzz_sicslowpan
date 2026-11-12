@@ -1,0 +1,9 @@
+project: savantenvs/contiki-ng
+target: fuzz_sicslowpan
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sicslowpan/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sicslowpan
+    libfuzzer: true
+    timeout: 10

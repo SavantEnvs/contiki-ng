@@ -1,0 +1,9 @@
+project: savantenvs/contiki-ng
+target: fuzz_uip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uip/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_uip
+    libfuzzer: true
+    timeout: 10
